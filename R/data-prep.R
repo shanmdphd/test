@@ -10,7 +10,6 @@ data<- xgxr::case1_pkpd
 # filtering cycle 1 & CMT ==2
 CYCLE1 <-data |>
   filter(CYCLE == 1 & CMT == 2)
-filter(!is.na(LIDV))
 
 # change ID into factor
 CYCLE1$ID <- as.factor(CYCLE1$ID)

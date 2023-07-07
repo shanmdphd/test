@@ -1,15 +1,11 @@
 ---
 output:
-  pdf_document: default
-  word_document: default
   github_document: default
+  word_document: default
+  pdf_document: default
 ---
 
-이것은 예제 입니다.....
-이것은 예제 입니다.....
-README.md
 
-
-```{r, code = readr::read_lines('R/data-prep.R'), error = TRUE}
+```{r, code = readr::read_lines('R/data-prep.R'), error = TRUE, message = FALSE}
 ```
 

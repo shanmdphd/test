@@ -1,78 +1,18 @@
 
-이것은 예제 입니다….. 이것은 예제 입니다….. README.md
-
 ``` r
 library (tidyverse)
-```
-
-    ## ── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
-    ## ✔ dplyr     1.1.2     ✔ readr     2.1.4
-    ## ✔ forcats   1.0.0     ✔ stringr   1.5.0
-    ## ✔ ggplot2   3.4.2     ✔ tibble    3.2.1
-    ## ✔ lubridate 1.9.2     ✔ tidyr     1.3.0
-    ## ✔ purrr     1.0.1     
-    ## ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
-    ## ✖ dplyr::filter() masks stats::filter()
-    ## ✖ dplyr::lag()    masks stats::lag()
-    ## ℹ Use the conflicted package (<http://conflicted.r-lib.org/>) to force all conflicts to become errors
-
-``` r
 library (ggplot2)
 library(NonCompart)
 library(dplyr)
 library(pkr)
-```
-
-    ## Loading required package: foreign
-    ## Loading required package: binr
-    ## Loading required package: forestplot
-    ## Loading required package: grid
-    ## Loading required package: checkmate
-    ## Loading required package: abind
-    ## Loading required package: rtf
-    ## 
-    ## Attaching package: 'rtf'
-    ## 
-    ## The following object is masked from 'package:purrr':
-    ## 
-    ##     done
-    ## 
-    ## The following object is masked from 'package:tibble':
-    ## 
-    ##     view
-    ## 
-    ## 
-    ## Attaching package: 'pkr'
-    ## 
-    ## The following objects are masked from 'package:NonCompart':
-    ## 
-    ##     AUC, BestSlope, IntAUC, Interpol, LinAUC, LogAUC, Slope, sNCA,
-    ##     tblNCA, Unit
-
-``` r
 library(ncar)
-```
 
-    ## 
-    ## Attaching package: 'ncar'
-    ## 
-    ## The following objects are masked from 'package:pkr':
-    ## 
-    ##     AddPage, ClosePDF, Note, pdfNCA, Plot4rtf, PrepPDF, Round, RptCfg,
-    ##     rtfNCA, Text1, TextM, toproper, txtNCA
-
-``` r
 data<- xgxr::case1_pkpd
 
 # filtering cycle 1 & CMT ==2
 CYCLE1 <-data |>
   filter(CYCLE == 1 & CMT == 2)
-filter(!is.na(LIDV))
-```
 
-    ## Error in eval(expr, envir, enclos): object 'LIDV' not found
-
-``` r
 # change ID into factor
 CYCLE1$ID <- as.factor(CYCLE1$ID)
 
